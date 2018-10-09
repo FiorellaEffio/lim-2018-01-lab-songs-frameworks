@@ -1,23 +1,23 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>{{ name }}</p>
-    <button v-on:click="rankingMetallica">Show results</button>
-    <ArtistSongsRanking/>
+    <p>Canciones</p>
+    <SongArtistComponent/>
+    <SongArtistComponent/>
+    <SongArtistComponent/>
   </div>
 </template>
 
 <script>
-import ArtistSongsRanking from './ArtistSongsRanking'
+import SongArtistComponent from './SongArtistComponent';
 
 export default {
-  name: 'ArtistGeneral',
+  name: 'ArtistSongsRanking',
   components: {
-    ArtistSongsRanking
+    SongArtistComponent
   },
   data () {
     return {
-      msg: 'Bienvenida a Ranking de canciones',
+      msg: 'Welcome to Your Vue.js App',
       name: 'Fiorella'
     }
   },

@@ -1,17 +1,28 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <HelloWorld/>
+    <ul>
+      <li v-for="artist in artistsArray">{{ artist }}
+      </li>
+    </ul>
+    <ArtistGeneral/>
+    <ArtistGeneral/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
+import ArtistGeneral from './components/ArtistGeneral'
 
 export default {
   name: 'App',
+  data () {
+    return {
+      msg: 'Welcome to Your Vue.js App',
+      artistsArray: ['metallica', 'coldplay', 'sia', 'radiohead', 'the+strokes']
+    }
+  },
   components: {
-    HelloWorld
+    ArtistGeneral
   }
 }
 </script>
