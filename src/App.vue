@@ -1,35 +1,30 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <ul>
-      <li v-for="artist in artistsArray">{{ artist }}
-      </li>
-    </ul>
-    <ArtistGeneral/>
-    <ArtistGeneral/>
+    <div v-for="artist in artists">
+      <Artist :artistName="artist"/>
+    </div>
   </div>
 </template>
 
 <script>
-import ArtistGeneral from './components/ArtistGeneral'
+import Artist from "./components/Artist";
 
 export default {
-  name: 'App',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App',
-      artistsArray: ['metallica', 'coldplay', 'sia', 'radiohead', 'the+strokes']
-    }
-  },
+  name: "App",
   components: {
-    ArtistGeneral
+    Artist
+  },
+  data : function() {
+    return {msg: "holis",
+    artists: ['metallica','radiohead']
+    }
   }
-}
+};
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
