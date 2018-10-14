@@ -9,7 +9,7 @@
 <script>
 export default {
   name: "Song",
-  props: ["artistName"],
+  props: ["songName"],
   data: function() {
     return { msg: "This is my message" };
   },

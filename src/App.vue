@@ -16,7 +16,7 @@ export default {
   },
   data : function() {
     return {msg: "holis",
-    artists: ['metallica','radiohead']
+    artists: ['sia','muse','the+strokes','metallica','radiohead']
     }
   }
 };
