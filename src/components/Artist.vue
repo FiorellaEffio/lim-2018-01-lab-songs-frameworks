@@ -26,15 +26,16 @@ export default {
   },
   methods: {
     getSongs: function() {
+      var self = this;
       let urlArtist = 'http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&api_key=8cd7c52e092d2a9a7f15b02486b94879&format=json&limit=10&artist=' + this.artistName;
       fetch(urlArtist)
         .then(function(response) {
           return response.json();
         })
         .then(function(myJson) {
-          console.log(data.msg)
-          this.songs = myJson.toptracks.track;
-          console.log(myJson.toptracks.track);
+          let result = myJson.toptracks.track;
+          self.songs = result;
+          console.log(result);
         });
     }
   },
