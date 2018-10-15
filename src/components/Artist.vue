@@ -2,11 +2,10 @@
   <div class="hello">
     <h1>Artista: '{{ artistName }}'</h1>
     <h2>Songs</h2>
-    {{songs[0]}}
     <div v-for="song in songs">
       <Song :songName="song"/>
     </div>
-    <button v-on:click="getSongs">Click me to see the artis</button>
+    <button v-on:click="getSongs">Click to see the songs</button>
   </div>
 </template>
 
