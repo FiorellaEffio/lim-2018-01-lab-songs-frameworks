@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h3>{{ songName.name }}</h3>
+    {{ songName.name }}
     <button>Like</button>
     <button>Dislike</button>
   </div>
